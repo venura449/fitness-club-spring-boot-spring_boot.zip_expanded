@@ -76,7 +76,7 @@ public class RegistrationController {
         }
 
         if (!userService.saveClient(userForm)) {
-            model.addAttribute("usernameError", "Пользователь с таким именем уже существует");
+            model.addAttribute("usernameError", "A user with the same name already exists");
             return "login";
         }
 
@@ -92,10 +92,7 @@ public class RegistrationController {
             return "registrationClient";
         }
 
-//        if (!this.userService.saveClient(userForm)) {
-//            model.addAttribute("usernameError", "Пользователь с таким именем уже существует");
-//            return "login";
-//        }
+
 
         userService.create(userForm);
         userService.saveClient(userForm);
@@ -111,7 +108,7 @@ public class RegistrationController {
         }
 
         if (!userService.saveTrainer(userForm)) {
-            model.addAttribute("usernameError", "Пользователь с таким именем уже существует");
+            model.addAttribute("usernameError", "A user with the same name already exists");
             return "registrationTrainers";
         }
 
@@ -126,7 +123,7 @@ public class RegistrationController {
             return "registrationAdmin";
         }
         if (!userService.saveAdmin(userForm)) {
-            model.addAttribute("usernameError", "Пользователь с таким именем уже существует");
+            model.addAttribute("usernameError", "A user with the same name already exists");
             return "registrationAdmin";
         }
 
